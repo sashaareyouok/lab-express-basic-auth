@@ -6,8 +6,18 @@ const userSchema = new Schema({
     type: String,
     unique: true
   },
-  password: String
-});
+  passwordHash: {
+    type: String,
+  required: [true, 'password']
+  }
+},
+
+  {
+    
+    timestamps: true
+  }
+  
+);
 
 const User = model("User", userSchema);
 
