@@ -1,0 +1,44 @@
+
+{{!-- <div id="formSignUP" --}}
+
+<h2>SignUp</h2>
+
+<style>
+      h2{
+            font-family: 'Times New Roman', Times, serif;
+      }
+
+      button{
+            color: purple;
+            background-color: sandybrown;
+      }
+
+      
+
+</style>
+
+<form action="/SignUPage" method="POST">
+
+
+<label> Email
+      <input type="email" name="email" placeholder="email" />
+
+</label>
+
+<label> Password
+      <input type="password" name="password" placeholder="********" />
+</label>
+
+<button type="submit">Create account</button>
+
+{{!-- place for error message--}}
+
+{{#if errorMessage}}
+
+    <p class="error">{{errorMessage}}
+
+{{/if}}
+
+
+</form>
+
